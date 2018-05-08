@@ -4,10 +4,12 @@ window.onload = function() {
 
   Entrada.addEventListener("change", (e) => {
     Spoiler.style.background = e.target.value;
-    console.log("Cambiando Color");
+    var ColorRGB = getRgb(e.target.value);
+    console.log("Cambiando Color "+e.target.value);
+    console.log("Rojo " + ColorRGB.r);
+    console.log("Azul " + ColorRGB.b);
+    console.log("Verde " + ColorRGB.g);
   })
-
-
 
   function getRgb(hex) {
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
